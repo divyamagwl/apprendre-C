@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 
+//Check Binary_recursive.c for Recursive Binary search
 int main(void)
 {
 
@@ -15,7 +16,6 @@ for(int i = 0; i < 10; i++) //Input of integer array separated by comma
 scanf("%d",&x); //Input of variable to be found in integer list 
 
 int Left = 0; //Leftmost possible index
-
 int Right = 9; //Rightmost possible index
 
 int result = 0; //Result representing variable is in input or not

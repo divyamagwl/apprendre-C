@@ -7,8 +7,6 @@ int i, j, L, N, a=0, common=0, reset=0, x=1;
 char S[1000];
 char group[1000][1000]; //2D Array arrangement of input string into substrings 
 
-
-
 scanf("%s", &S[0]); //Input of string by user
 scanf("%d", &L); //Length of substrings
 
@@ -42,11 +40,12 @@ if(L>0)
 		x++;
 	}
 
-
   printf("%d\n",N-L+1-common);
   }
+  
   else
 	printf("%d\n",0);
 }
+
 return 0;
 }

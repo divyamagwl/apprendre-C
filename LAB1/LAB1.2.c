@@ -1,26 +1,21 @@
 #include<stdio.h>
 int main(void)
 {
-int a, b, c;
+int a, b;
 scanf("%d",&a);
 scanf("%d",&b);
-if (a&&b>0)
+
+if (a && b >0)
 {
-if (a<=b)
-{
-c = b%a;
-printf("%d\n", c);
+	if (a<=b)
+		printf("%d\n", (b % a));
+	else
+		printf("%d\n", (a % b));
 }
+
 else
-{
-c = a%b;
-printf("%d\n", c);
-}
-}
-else
-{
-printf("Invalid input\n");
-}
+	printf("Invalid input\n");
+
 return 0;
 }
 

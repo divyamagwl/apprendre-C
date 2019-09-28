@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+//Check Linear_recursive.c for Recursive Linear search
 int main(void)
 {
 int array[10];

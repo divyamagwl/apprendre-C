@@ -16,15 +16,12 @@ for (int i = 0; i < 19; i++)
 			swap(Array[j] , Array[j+1]); //Swapping elements
 			swaps++; //Increasing count of Swap variable when we swap a lower value element with higher value element 
 		}
-		comparisons++; //Increasing count of Comparison variable
-	
+		comparisons++; //Increasing count of Comparison variable	
 	}
 }
 
 for (int i = 0; i < 20; i++) //Printing sorted array
-{
 	printf("%ld ", Array[i]);
-}
 
 printf("\n");
 printf("%d ",swaps); //Printing swap and comparison variables
@@ -33,14 +30,11 @@ printf("%d",comparisons);
 }
 
 int main(void)
-
 {
 long int Array[20]; //Initializing an integer array
 
 for (int i = 0; i < 20; i++)
-{
 	scanf("%ld,",&Array[i]); //Taking input as integers separated by a comma
-}
 
 bubblesort(Array);
 

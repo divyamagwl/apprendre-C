@@ -1,5 +1,8 @@
 #include<stdio.h>
 
+//Not used the concept of Euclid algorithm
+//You should try using Euclid algorithm (Check Euclid.c) 
+
 int main(void)
 {
 int i, a, b, gcd;
@@ -13,13 +16,13 @@ else if(a==0 && b!=0)
 else if(a!=0 && b==0)
 	printf("%d\n", a);
 else
+{
+	for(i=1; i<=a && i<=b; i++)
 	{
-	for(i=1; i<=a && i<=b; ++i)
-		{
 		if(a%i== 0 && b%i==0)
 			gcd = i;
-		}
-	printf("%d\n", gcd);
 	}
+	printf("%d\n", gcd);
+}
 return 0;
 }
