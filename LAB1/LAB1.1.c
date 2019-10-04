@@ -1,20 +1,21 @@
 #include<stdio.h>
+
 int main(void)
 {
-float r,area ;
-scanf("%f",&r);
+	float radius,area;
+	scanf("%f",&radius);
 
-if (r>=0)
-{
-	area = 3.14*r*r;
-	printf("%.2f\n", area);
-}
+	if (radius>=0)
+	{
+		area = 3.14*radius*radius;
+		printf("%.2f\n", area);
+	}
 
-else
-{
-	printf("Invalid input\n");
-}
+	else
+	{
+		printf("Invalid input\n");
+	}
 
-return 0;
+	return 0;
 }
 
