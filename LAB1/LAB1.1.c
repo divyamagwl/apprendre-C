@@ -13,7 +13,7 @@ int main(void)
 
 	else
 	{
-		printf("Invalid input\n");
+		printf("Invalid Input\n");
 	}
 
 	return 0;
