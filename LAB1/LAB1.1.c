@@ -1,13 +1,10 @@
 #include<stdio.h>
 
-int main(void)
+void area_func(float r)
 {
-	float radius,area;          //initialising radius and area
-	scanf("%f",&radius);        //getting input from user
- 
-	if (radius>=0)
+	if (r>=0)
 	{
-		area = 3.14 * radius * radius;
+		area = 3.14 * r * r;
 		printf("%.2f\n", area);
 	}
 
@@ -15,6 +12,14 @@ int main(void)
 	{
 		printf("Invalid input\n");
 	}
+}
+
+int main(void)
+{
+	float radius,area;          //initialising radius and area
+	scanf("%f",&radius);        //getting input from user
+ 
+	area_func(radius);
 
 	return 0;
 }
