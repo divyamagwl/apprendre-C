@@ -10,7 +10,7 @@ void area_func(float r)
 
 	else
 	{
-		printf("Invalid input\n");
+		printf("Invalid Input\n");
 	}
 }
 
