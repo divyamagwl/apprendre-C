@@ -19,7 +19,7 @@ a = (a>=0)? a:-a;
 b = (b>=0)? b:-b;
 
 if (a== 0 && b ==0)
-	printf("Invalid Input\n");
+	printf("Invalid input\n");
 else
 	printf("%d\n", gcd(a,b));
 
