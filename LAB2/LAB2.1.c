@@ -1,7 +1,5 @@
 #include<stdio.h>
-
-//Not used the concept of Euclid algorithm
-//You should try using Euclid algorithm (Check Euclid.c) 
+ // done the problem using euclid's alogrithm
 
 int main(void)
 {
@@ -17,12 +15,13 @@ else if(a!=0 && b==0)
 	printf("%d\n", a);
 else
 {
-	for(i=1; i<=a && i<=b; i++)
-	{
-		if(a%i== 0 && b%i==0)
-			gcd = i;
-	}
-	printf("%d\n", gcd);
+   while (b > 0)
+   {
+      int r = a % b;
+      a = b;
+      b = r;
+   }
+printf("%d\n", a);
 }
 return 0;
 }
