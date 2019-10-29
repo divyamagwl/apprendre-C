@@ -17,7 +17,7 @@ int selection(int array[], int n, int index)
 	int k = min_index(array, index, n-1);
 	comparisons++;
 	swap(array[k],array[index]);
-	swaps++;
+	swaps=swaps+1;
 	selection(array, n, index+1);
 }
 
