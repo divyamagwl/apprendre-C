@@ -1,26 +1,42 @@
 #include<stdio.h>
-#include<stdlib.h>
 #include<string.h>
+#include<stdlib.h>
 
-int strindex(char* str, char c)
+int strindex(char* str, char* t)
 {
-  int len = strlen(str);
-  for(int i = len-1; i>=0; i--)
+  int flag =0;
+  int len_str = strlen(str);
+  int len_t = strlen(t);
+  for(int i = len_str; i>=len_t; i--)
   {
-    if(str[i] == c)
-    {
-      return i;
+    for(int j = 0; j<len_t; j++)
+    {    
+        if(str[i-len_t+j] == t[j])
+        {
+            flag++;
+        }
+        else
+        {
+            break;
+        }
+        
+        if(flag == len_t)
+        {
+            return i-len_t;
+        }
     }
+    flag = 0;
   }
   return -1;
 }
 
 int main()
 {
-char* s; char t;
+char* s; char* t;
 s = (char*)malloc(550 * sizeof(char));
+t = (char*)malloc(550 * sizeof(char));
 
-scanf("%s %c",s ,&t);
+scanf("%s %s",s,t);
 
 int index = strindex(s, t);
 printf("%d\n", index);
