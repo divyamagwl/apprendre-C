@@ -18,12 +18,13 @@ float multiply(float a, float b) //Multiplication function
 
 float division(float a, float b) //Division function
 {
-	return a/b;
+	if (b!= 0)
+		return a/b;
 } 
 
 int main()
 {
-	float (*operations[])(float, float) = {add, subtract, multiply, division}; //Initializing pointer function array with points to functions 
+	float (*operations[])(float, float) = {add, subtract, multiply, division}; //pointer function array which points to different functions 
 	float a,b,output; 
 	char operator;
 
@@ -35,19 +36,19 @@ int main()
 		output = (*operations[0])(a,b); //Using pointer function array 
 	}
 	else if(operator == '-')
-        {
-                output = (*operations[1])(a,b); //Using pointer function array 
-        }
+	{
+		output = (*operations[1])(a,b); //Using pointer function array 
+	}
 	else if(operator == '*')
-        {
-                output = (*operations[2])(a,b); //Using pointer function array 
-        }
+	{
+		output = (*operations[2])(a,b); //Using pointer function array 
+	}
 	else if(operator == '/')
 	{
 		output = (*operations[3])(a,b); //Using pointer function array 
 	}
 		
-	printf("%.4f",output);
+	printf("%.4f\n",output);
 
 return 0;
 }
